@@ -1,0 +1,30 @@
+name: matplotlib_basics CI
+
+on:
+  push:
+    paths:
+      - "matplotlib_basics/**"
+      - ".github/workflows/matplotlib_basics.yml"
+  pull_request:
+    paths:
+      - "matplotlib_basics/**"
+      - ".github/workflows/matplotlib_basics.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: matplotlib_basics
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install ruff pytest matplotlib numpy
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest

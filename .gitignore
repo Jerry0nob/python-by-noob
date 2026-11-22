@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+unnamed.py
+vscode_lsp_terminal_prompt_tracker.py
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.env
+.vscode/
+output/

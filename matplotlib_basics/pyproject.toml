@@ -1,0 +1,13 @@
+[project]
+name = "matplotlib-basics"
+version = "0.1.0"
+description = "Basic matplotlib charts with tested math helpers"
+requires-python = ">=3.11"
+dependencies = ["matplotlib", "numpy"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

@@ -1,0 +1,30 @@
+name: guessnumber CI
+
+on:
+  push:
+    paths:
+      - "guessnumber/**"
+      - ".github/workflows/guessnumber.yml"
+  pull_request:
+    paths:
+      - "guessnumber/**"
+      - ".github/workflows/guessnumber.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guessnumber
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install ruff pytest
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest
