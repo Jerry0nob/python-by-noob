@@ -28,11 +28,11 @@ def test_info_for_slash_31():
     info = subnet_info("10.0.0.0/31")
     assert info.network == "10.0.0.0"
     assert info.broadcast == "10.0.0.1"
-    assert info.usable_hosts == 2     # /31 has no usable hosts
+    assert info.usable_hosts == 2
 
 
 def test_info_for_slash_32():
     info = subnet_info("10.0.0.0/32")
     assert info.network == "10.0.0.0"
     assert info.broadcast == "10.0.0.0"
-    assert info.usable_hosts == 1   # /32 has no usable hosts
+    assert info.usable_hosts == 1
