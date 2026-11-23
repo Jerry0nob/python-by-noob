@@ -1,0 +1,12 @@
+[project]
+name = "portscan"
+version = "0.1.0"
+description = "Multithreaded TCP connect port scanner"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

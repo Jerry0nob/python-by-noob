@@ -7,7 +7,7 @@ its own tests and its own GitHub Actions pipeline.
 |---|---|---|
 | [guessnumber](guessnumber/) | Command-line number guessing game | ![guessnumber CI](https://github.com/Jerry0nob/python-by-noob/actions/workflows/guessnumber.yml/badge.svg) |
 | [matplotlib_basics](matplotlib_basics/) | First charts with matplotlib and numpy | ![matplotlib_basics CI](https://github.com/Jerry0nob/python-by-noob/actions/workflows/matplotlib_basics.yml/badge.svg) |
-| [portscan](portscan/) | TCP connect port scanner (work in progress) | - |
+| [portscan](portscan/) | Multithreaded TCP connect port scanner | ![portscan CI](https://github.com/Jerry0nob/python-by-noob/actions/workflows/portscan.yml/badge.svg) |
 
 ## How the pipelines work
 
